@@ -13,7 +13,7 @@ A self-hosted, real-time, analytics dashboard with support for custom events and
 
 Once you have the application running, you can embed some javascript on sites you want to track events from.
 
-Place the code in the <head> of your page and remember to add the domain to the `CORS_ALLOWED_ORIGIN` array in [./config](./src/config.ts) inorder to allow cross-origin requests.
+Place the code in the `<head>` of your page and remember to add the domain to the `CORS_ALLOWED_ORIGIN` array in [./config](./src/config.ts) inorder to allow cross-origin requests.
 
 ```HTML
 <script async src="https://your-app-diomain.com/api/stats.js" />
