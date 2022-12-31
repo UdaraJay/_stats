@@ -1,0 +1,29 @@
+.card {
+	padding: 22px 0;
+
+	.heading {
+		color: var(--secondary-hex);
+		font-size: 0.9em;
+		margin-bottom: 12px;
+	}
+}
+
+.table {
+	// background: var(--background-secondary-hex);
+	background: none;
+	border-radius: 0;
+	border: none;
+	border-collapse: collapse;
+	// border: 1px solid var(--border-hex);
+	border-radius: 17px;
+	width: calc(100% - 22px);
+	// margin: 12px 0;
+	// padding: 3px 5px;
+
+	th,
+	td {
+		background: none;
+		text-align: left;
+		padding: 5px 0;
+	}
+}

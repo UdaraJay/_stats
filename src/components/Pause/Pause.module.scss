@@ -1,0 +1,66 @@
+.pause {
+	margin: 12px 0 12px 0;
+	/* reset */
+	button {
+		all: unset;
+	}
+
+	.SwitchRoot {
+		display: flex;
+		vertical-align: middle;
+		align-items: center;
+		width: 31px;
+		height: 21px;
+		background-color: var(--border-hex);
+		border: 1px solid var(--border-hex);
+		border-radius: 9999px;
+		position: relative;
+		-webkit-tap-highlight-color: var(--border-hex);
+	}
+	.SwitchRoot:focus {
+		box-shadow: 0 0 0 1px var(--highlight-hex);
+	}
+
+	.SwitchRoot[data-state='checked'] {
+		// background-color: var(--highlight-hex);
+	}
+
+	.SwitchThumb {
+		display: block;
+		width: 15px;
+		height: 15px;
+		background-color: white;
+		border-radius: 9999px;
+		transition: transform 100ms;
+		transform: translateX(4px);
+		// margin-top: -1px;
+		will-change: transform;
+		box-shadow: none;
+		border: none;
+	}
+
+	.SwitchThumb[data-state='checked'] {
+		transform: translateX(12px);
+		background-color: var(--primary-hex);
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	.Label {
+		font-size: 0.85em;
+		color: var(--secondary-hex);
+		line-height: 1;
+		user-select: none;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Collector {
+  id        String   @id @unique
+  origin    String
+  timestamp DateTime @default(now())
+  events    Event[]
+}
+
+model Event {
+  id          String    @id @unique
+  url         String
+  type        String    @default("pageview")
+  country     String    @default("undefined")
+  city        String    @default("undefined")
+  timestamp   DateTime  @default(now())
+  collector   Collector @relation(fields: [collectorId], references: [id])
+  collectorId String
+}
+
+model Url {
+  url         String   @id @unique
+  totalEvents Int      @default(0)
+  firstSeen   DateTime @default(now())
+}
+
+model Location {
+  city        String   @id @unique
+  country     String
+  totalEvents Int      @default(0)
+  firstSeen   DateTime @default(now())
+}
+
+model Daily {
+  id        String   @id @unique
+  url       String
+  type      String   @default("pageview")
+  count     Int      @default(0)
+  timestamp DateTime @default(now())
+}

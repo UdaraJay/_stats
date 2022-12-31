@@ -1,0 +1,57 @@
+.cards {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	@media only screen and (max-width: 800px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.card {
+		flex: 0 0 auto;
+		padding: 12px 0;
+		border-radius: 17px;
+		width: 200px;
+		margin: 0 40px 0 0;
+
+		.num {
+			animation: pulse 2s ease-in-out 1;
+			font-size: 3em;
+			font-weight: 700;
+			line-height: 1;
+			margin-bottom: 5px;
+
+			font-size: 48px;
+			font-weight: bold;
+			text-transform: uppercase;
+			background: linear-gradient(to top right, #fff, rgb(136, 136, 136));
+			background: var(--gradient);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.what {
+			color: var(--secondary-hex);
+		}
+
+		.info {
+			margin-top: 2px;
+			color: var(--secondary-hex);
+			font-size: 0.9em;
+		}
+	}
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}

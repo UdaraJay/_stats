@@ -1,0 +1,30 @@
+.timespan {
+	display: flex;
+	vertical-align: middle;
+	align-items: center;
+	border: 1px solid var(--border-hex);
+	border-radius: 12px;
+
+	.slot {
+		font-size: 0.85em;
+		text-align: right;
+		color: var(--secondary-hex);
+		padding: 8px 12px;
+		border-right: 1px solid var(--border-hex);
+		font-weight: 500;
+		transition: all ease-in-out 120ms;
+
+		&:last-child {
+			border-right: none;
+		}
+
+		&:hover {
+			cursor: pointer;
+			color: var(--primary-hex);
+		}
+
+		&.active {
+			color: var(--highlight-hex);
+		}
+	}
+}

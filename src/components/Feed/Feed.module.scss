@@ -1,0 +1,60 @@
+.realtime {
+	margin-top: 12px;
+	width: calc(100%);
+
+	.heading {
+		color: var(--secondary-hex);
+		font-size: 0.9em;
+		margin-bottom: 8px;
+		padding-bottom: 12px;
+	}
+}
+
+.tableWrapper {
+	max-height: 800px;
+	overflow-y: scroll;
+	border-bottom: 1px solid var(--border-hex);
+}
+
+.table {
+	border: none;
+	padding: 0;
+	margin: 0;
+	border-collapse: collapse;
+	max-height: 100vh;
+	background: var(--background-secondary-hex);
+	background: none;
+
+	border: none;
+	border-radius: 12px;
+}
+
+.type {
+	display: flex;
+
+	.icon {
+		height: 16px;
+		width: 16px;
+		margin: 0 8px 0 0;
+		padding: 0;
+	}
+
+	.txt {
+		opacity: 0.5;
+	}
+}
+
+.pathname {
+	overflow: scroll;
+	// text-overflow: ellipsis;
+	white-space: nowrap;
+	// width: 300px;
+}
+
+.location {
+	width: 90px;
+
+	.icon {
+		margin-left: 3px;
+	}
+}
