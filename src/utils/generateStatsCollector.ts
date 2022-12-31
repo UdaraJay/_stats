@@ -8,18 +8,17 @@ const generateStatsCollector = (collectorId: string) => {
     "use strict"
 
     function init(){
-        const links = document.querySelectorAll('a[href^="http"]');
-
-        // Loop through the links and add a click event listener to each one
-        links.forEach(link => {
-            // TODO: add listeners only for external links
-            link.addEventListener('click', (event) => {
-                event.preventDefault()
-
-                collect('external_link_click').then(() => {
-                    window.location = link.href
-                })                
-            });
+        document.addEventListener('click', function(event) {
+            if (event.target.tagName === 'A') {
+                const target = event.target.getAttribute('target');
+                const href = event.target.getAttribute('href');
+                
+                if (target === '_blank') {
+                    collect('external_link_click');
+                } else {
+                    collect('link_click');
+                }
+            }
         });
 
         collect('init')
