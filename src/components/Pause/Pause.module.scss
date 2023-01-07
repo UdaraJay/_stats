@@ -10,7 +10,7 @@
 		vertical-align: middle;
 		align-items: center;
 		width: 31px;
-		height: 21px;
+		height: 22px;
 		background-color: var(--border-hex);
 		border: 1px solid var(--border-hex);
 		border-radius: 9999px;
@@ -22,7 +22,7 @@
 	}
 
 	.SwitchRoot[data-state='checked'] {
-		// background-color: var(--highlight-hex);
+		background-color: var(--highlight-hex);
 	}
 
 	.SwitchThumb {
