@@ -21,6 +21,10 @@ const generateStatsCollector = (collectorId: string) => {
             }
         });
 
+        window.addEventListener("beforeunload", function(event) {
+           collect('exit')
+        });
+
         collect('init')
     }
 

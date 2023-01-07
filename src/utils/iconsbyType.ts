@@ -4,7 +4,7 @@ import {
 	EyeOpenIcon,
 	MagicWandIcon,
 	Link2Icon,
-	CursorArrowIcon,
+	ExitIcon,
 } from '@radix-ui/react-icons';
 
 const IconByType: any = {
@@ -13,6 +13,7 @@ const IconByType: any = {
 	init: [MagicWandIcon, 'lightgreen'],
 	external_link_click: [Link2Icon, '#ddd'],
 	default: [FontRomanIcon, '#ddd'],
+	exit: [ExitIcon, '#E71D36'],
 };
 
 export default IconByType;
