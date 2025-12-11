@@ -1,3 +1,5 @@
+> Deprecated in favor of newer [Stats](https://github.com/UdaraJay/Stats)
+
 # \_Stats: A real-time analytics dashboard
 
 A self-hosted, real-time, analytics dashboard with support for custom events and privacy preserving tracking. If you're looking for simple analytics software for a small–medium traffic website, this could be the right fit for you.
